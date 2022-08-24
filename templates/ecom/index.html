@@ -344,9 +344,9 @@ img {
   background: #fff;
   border-radius: 50px;
   margin: 0 .2em 1em;
-  &:hover {
+  /* &:hover {
     background: red;
-  }
+  } */
 }
 
 .slide {
@@ -421,9 +421,8 @@ img {
           <div class="row">
             <div class="el-wrapper">
               <div class="box-up">
-                <img class="img" src="{% static p.product_image.url %}" alt="product pic" height="300px" width="300px">
-                <div class="img-info">
-                  <model-viewer
+                <!-- <img class="img" src="{% static p.product_image.url %}" alt="product pic" height="300px" width="300px"> -->
+                <model-viewer
                     data-name="{{p.name}}"
                     src="{% static p.product_glb.url %}"
                     ios-src="{% static p.product_usdz.url %}"
@@ -433,6 +432,8 @@ img {
                     auto-rotate
                     poster="{% static p.product_image.url %}"
                   >
+                <div class="img-info">
+                  
                   <div class="info-inner">
                     <span style="background-color:#3e454c; color:fbfbfb;"class="p-company">{{p.name}}</span>
 
@@ -474,15 +475,13 @@ img {
 <h3 style="text-align:center; color:#3E454C;">No Search Found</h3>
 {%endif%}
 
-<script>
+<!-- <script>
     {%if messages %}
     {%for message in messages%}
     alert('{{message}}');
     {%endfor%}
     {%endif%}
-</script>
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</script> -->
 <br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br>
 
